@@ -1,11 +1,10 @@
 {
-  "main": "node_modules/expo/AppEntry.js",
   "scripts": {
     "build": "rm -rf lib && babel '*.js' components mock --out-dir  lib && cp -R ./images/ lib/ && flow-copy-source src lib",
-    "start": "react-native-scripts start",
+    "start": "react-native start",
     "eject": "react-native-scripts eject",
-    "android": "react-native-scripts android",
-    "ios": "react-native-scripts ios",
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
     "eslint": "eslint '**/*.js' --max-warnings 0",
     "prettier": "prettier --list-different '**/*.{js,ts}'",
     "lint": "prettier --list-different '**/*.{js,ts}' && eslint '**/*.js' --max-warnings 0 && flow",
@@ -29,14 +28,17 @@
     "numeral": "^2.0.6",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-40.0.1.tar.gz",
+    "react-native": "~0.63.4",
     "react-native-dotenv": "^2.4.3",
     "react-native-gesture-handler": "~1.8.0",
     "react-native-reanimated": "~1.13.0",
     "react-native-safe-area-context": "3.1.9",
     "react-native-safe-area-view": "^1.1.1",
     "react-native-screens": "~2.15.0",
-    "react-native-web": "~0.13.12"
+    "react-native-web": "~0.13.12",
+    "expo-splash-screen": "~0.8.0",
+    "expo-updates": "~0.4.0",
+    "react-native-unimodules": "~0.12.0"
   },
   "devDependencies": {
     "@babel/core": "~7.9.0",
@@ -53,7 +55,11 @@
     "jest-expo": "~27.0.0",
     "prettier": "^1.13.7",
     "react-native-scripts": "1.14.0",
-    "react-test-renderer": "16.3.1"
+    "react-test-renderer": "16.3.1",
+    "babel-jest": "~25.2.6",
+    "jest": "~25.2.6"
   },
-  "private": true
+  "private": true,
+  "name": "react-native-example",
+  "version": "1.0.0"
 }
